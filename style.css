@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background: #c8c3c3; */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Aligns it at the very top of the screen */
+    left: 0;
+    width: 100%; /* Ensures the navbar spans the full width of the viewport */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    background: #0a0a0a; 
+    color: white;/* Background color for the navbar */
+    z-index: 1000; /* Ensures the navbar stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a neat effect */
+}
+
+.navbar h2 {
+    cursor: pointer;
+    font-size: 24px;
+    
+}
+
+.navlink {
+    list-style: none;
+    display: flex; /* Ensures horizontal layout */
+    margin: 0;
+}
+
+.navlink li {
+    padding: 0px 15px;
+}
+
+.navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navlink a:hover {
+    color: #007BFF; /* Changes color on hover */
+}
+
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.container{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+.left-menu{
+    width: 110px;
+    height: 710px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    /* background: #fffdfd; */
+    backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);
+    transition: width 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0 15px;
+}
+.menu ul li{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.left-menu:hover{
+    width: 250px;
+}
+
+.left-menu:hover .menu div{
+    display: block;
+}
+.left-menu:hover .menu{
+    width: 100%;
+}
+
+.mid{
+    margin-top: 10%;
+}
+
+.mid-section{
+    height: 500px;
+    width: 69%;
+    background: #d9d1d1;
+    align-items: center;
+    border-radius: 5%;
+    padding: 20px;
+    margin-left: 10%;
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+}
+
+.mid-section p{
+    color: rgb(0, 0, 0);
+    
+    
+}
+.right{
+    margin-top: 10%;
+    display: flex;
+}
+
+.right-section{
+    height: 500px;
+    width: 253px;
+    background: #d9d1d1;
+    display: flex;
+    position :absolute;
+    right: 0;
+    border-radius: 5% 0 0 5%;
+    padding: 20px;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.footer{
+    background: #000;
+color: white;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .mid-section{
+        height: 400px;
+    width: 62%;
+    transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+
+    .right-section{
+        height: 400px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .mid-section{
+        height: 350px;
+        margin-left: 15%;
+    width: 60%;
+    transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+
+    .right-section{
+        height: 350px;
+        width: 170px;
+        transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .container{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .mid-section{
+        height: 300px;
+    width: 55%;
+    margin-left: 20%;
+   
+    transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+
+    .right-section{
+        height: 300px;
+        width: 140px;
+        transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+}
+
+@media (max-width: 575.98px) {
+     
+    .left-menu{
+        width: 70px;
+    }
+    .navbar .logo{
+        display: none;
+    }
+
+    .login-btn{
+        display: none;
+    }
+    .mid-section{
+        height: 300px;
+    width: 60%;
+    margin-left: 30%;
+   
+    transition: width 0.3s ease, background-color 0.5s ease-in-out;
+    }
+
+    .right-section{
+      display: none;
+    }
+}
